@@ -44,14 +44,6 @@ steps:
       
       echo "Emulator started"
 
-- task: AppCenterTest@1
-  inputs:
-    appFile: '$(Build.ArtifactStagingDirectory)/*.apk'
-    artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    frameworkOption: 'appium'
-    credentialsOption: 'serviceEndpoint'
-    localeOption: 'en_US'
-
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
