@@ -46,7 +46,7 @@ steps:
 
 - task: AppCenterTest@1
   inputs:
-    appFile: '$(Build.ArtifactStagingDirectory)/*.apk'
+    appFile: '$(Build.ArtifactStagingDirectory)/app/build/outputs/apk/*.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'appium'
     credentialsOption: 'serviceEndpoint'
