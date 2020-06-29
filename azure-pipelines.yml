@@ -53,7 +53,7 @@ steps:
 
 - task: AppCenterTest@1
   inputs:
-    appFile: '/Users/runner/runners/2.170.1/work/1/a/app/build/outputs/apk/*.apk'
+    appFile: '/Users/runner/runners/2.170.1/work/1/a/app/build/outputs/apk/app-prod-debug.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'appium'
     credentialsOption: 'serviceEndpoint'
