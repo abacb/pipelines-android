@@ -53,7 +53,7 @@ steps:
 
 - task: AppCenterTest@1
   inputs:
-    appFile: '$(build.artifactStagingDirectory)/app-prod-debug.apk'
+    appFile: '$(build.artifactStagingDirectory)/app/build/outputs/apk/app-prod-debug.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'appium'
     appiumBuildDirectory: '$(build.artifactStagingDirectory)/DerivedData/Build/Products/Debug-andrioid'
