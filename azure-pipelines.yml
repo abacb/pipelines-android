@@ -56,7 +56,7 @@ steps:
     appFile: '$(build.artifactStagingDirectory)/app/build/outputs/apk/app-prod-debug.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     frameworkOption: 'appium'
-    appiumBuildDirectory: 'target/upload'
+    appiumBuildDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'App Center'
     appSlug: 'senyum/MyAndroidApp'
