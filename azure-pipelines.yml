@@ -28,14 +28,14 @@ steps:
 
 - task: AppCenterTest@1
   inputs:
-    appFile: '$(build.artifactStagingDirectory)/app/build/outputs/apk/app-prod-debug.apk'
+    appFile: '$(Build.ArtifactStagingDirectory)/app/build/outputs/apk/debug/*.apk'
     artifactsDirectory: '$(Build.ArtifactStagingDirectory)/AppCenterTest'
-    frameworkOption: 'appium'
-    appiumBuildDirectory: '$(Build.ArtifactStagingDirectory)'
+    frameworkOption: 'espresso'
+    espressoBuildDirectory: '$(Build.ArtifactStagingDirectory)/app/build/outputs/apk/androidTest/debug'
     credentialsOption: 'serviceEndpoint'
     serverEndpoint: 'App Center'
     appSlug: 'senyum/MyAndroidApp'
-    devices: 'senyum/d187960b'
+    devices: 'd187960b'
     localeOption: 'en_US'
 
 - task: PublishBuildArtifacts@1
